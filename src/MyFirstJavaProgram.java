@@ -12,20 +12,20 @@ public class MyFirstJavaProgram {
         System.out.println("Welcome " + username + "!!");
 
         String password = "12345";
-
+        int counter = 0;
         boolean isValid;
         do {
             String userPassword = readValueFromConsole();
-
+            counter ++;
             isValid = password.equals(userPassword);
             if(isValid) {
                 System.out.println("You have access!");
                 System.exit(0);
             } else {
-                System.out.println("ACCESS DENIED!");
+                System.out.println("ACCESS DENIED! Attempts " + counter + ".");
             }
         } while(!isValid);
-        System.out.println("Ai gasit comoara!");
+        System.out.println("Ai gasit comoara! Din " + counter + " incercari!");
     }
 
 
