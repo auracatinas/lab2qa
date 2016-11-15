@@ -17,6 +17,10 @@ public class MyFirstJavaProgram {
         do {
             String userPassword = readValueFromConsole();
             counter ++;
+//            if(counter >= 3) {
+//                System.out.println("Reached max attempts!");
+//                System.exit(0);
+//            }
             isValid = password.equals(userPassword);
             if(isValid) {
                 System.out.println("You have access!");
@@ -24,7 +28,9 @@ public class MyFirstJavaProgram {
             } else {
                 System.out.println("ACCESS DENIED! Attempts " + counter + ".");
             }
-        } while(!isValid);
+        } while(!isValid && counter > 1 && counter < 4);
+        // nimerit parola: isValid = true => !isValid = false
+        // false || 1 < 4
         System.out.println("Ai gasit comoara! Din " + counter + " incercari!");
     }
 
