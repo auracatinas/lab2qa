@@ -13,13 +13,19 @@ public class MyFirstJavaProgram {
 
         String password = "12345";
 
-        String userPassword = readValueFromConsole();
+        boolean isValid;
+        do {
+            String userPassword = readValueFromConsole();
 
-        if(password.equals(userPassword)) {
-            System.out.println("You have access!");
-        } else {
-            System.out.println("ACCESS DENIED!");
-        }
+            isValid = password.equals(userPassword);
+            if(isValid) {
+                System.out.println("You have access!");
+                System.exit(0);
+            } else {
+                System.out.println("ACCESS DENIED!");
+            }
+        } while(!isValid);
+        System.out.println("Ai gasit comoara!");
     }
 
 
