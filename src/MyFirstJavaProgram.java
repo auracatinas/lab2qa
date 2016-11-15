@@ -9,7 +9,7 @@ public class MyFirstJavaProgram {
     public static void main(String[] args) {
         System.out.println("Username: ");
         String username = readValueFromConsole();
-        System.out.println("Welcome " + username + "!");
+        System.out.println("Welcome " + username + "!!");
     }
 
 
