@@ -10,6 +10,16 @@ public class MyFirstJavaProgram {
         System.out.println("Username: ");
         String username = readValueFromConsole();
         System.out.println("Welcome " + username + "!!");
+
+        String password = "12345";
+
+        String userPassword = readValueFromConsole();
+
+        if(password.equals(userPassword)) {
+            System.out.println("You have access!");
+        } else {
+            System.out.println("ACCESS DENIED!");
+        }
     }
 
 
