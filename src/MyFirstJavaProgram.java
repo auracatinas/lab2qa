@@ -16,22 +16,21 @@ public class MyFirstJavaProgram {
         boolean isValid;
         do {
             String userPassword = readValueFromConsole();
-            counter ++;
-//            if(counter >= 3) {
-//                System.out.println("Reached max attempts!");
-//                System.exit(0);
-//            }
             isValid = password.equals(userPassword);
-            if(isValid) {
-                System.out.println("You have access!");
-                System.exit(0);
-            } else {
+            if (!isValid) {
+                counter ++;
                 System.out.println("ACCESS DENIED! Attempts " + counter + ".");
             }
-        } while(!isValid && counter > 1 && counter < 4);
-        // nimerit parola: isValid = true => !isValid = false
-        // false || 1 < 4
-        System.out.println("Ai gasit comoara! Din " + counter + " incercari!");
+        } while(!isValid && counter < 3);
+        if(isValid) {
+            System.out.println("Access granted! Din " + counter + " incercari!");
+        } else {
+            if(counter > 3) {
+                System.out.println(" Counter exceeded");
+            }
+        }
+
+
     }
 
 
