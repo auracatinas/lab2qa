@@ -6,25 +6,22 @@ import java.util.Scanner;
  */
 public class MyFirstJavaProgram {
 
+    public static void printValuesTo10() {
+        for(int i=10; i >= 0; i = i - 1) {
+            System.out.println(i);
+        }
+    }
+
+    public static void algoritm1() {
+
+    }
+
     public static void main(String[] args) {
-        System.out.println("Username: ");
-        String username = readValueFromConsole();
-        System.out.println("Welcome " + username + "!!");
 
-        String password = "12345";
-        int counter = 0;
-        boolean isValid;
-        do {
-            String userPassword = readValueFromConsole();
-            counter++;
-            isValid = password.equals(userPassword);
-            if(isValid) {
-                System.out.println("You have access!");
-                System.out.println("Ai gasit comoara! Din " + counter + " incercari!");
-            } else {
-                System.out.println("ACCESS DENIED! Attempts " + counter + ".");
-            }
-        } while(!isValid && counter < 4);
+
+        printValuesTo10();
+        WelcomeUser.loginUser();
+
     }
 
 
@@ -42,7 +39,5 @@ public class MyFirstJavaProgram {
 
 
 
-    private static String readValueFromConsole() {
-        return new Scanner(System.in).nextLine();
-    }
+
 }
